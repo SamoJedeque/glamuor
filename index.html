@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Home | GLAMOUR</title>
+</head>
+<!-- A sequência do desenvolvimento é do header "nav",
+body "container(esquerda, direta e por fim o centro "os posts")" e por fim
+o rodapé -->
+<body>
+    <!-- Cabecalho da pagina -->
+    <header class="header-container" onclick="allClose()">
+        
+        <!-- logo da app e a opcao de pesquisa -->
+        <section class="nav-left">
+            <!-- devemos trabalhar no logotipo, 
+            este fiz no photoshop e nem domino aquela merda. -->
+            <img src="img/logo.png" class="logo">
+            <div class="search-box">
+                <img src="img/search.png" >
+                <input type="search" placeholder="Pesquisa no TicketLine..,">
+            </div>
+        </section>
+
+        <!-- Aqui temos o menu principal do site -->
+        <section class="nav-right">
+            <nav class="prinpal-menu">
+                <ul>
+                    <li><a href="#"><img src="img/news .png" class="home"></a><p>Principal</p></li>
+                    <li><a href="#"><img src="img/watch.png" class="video"></a> <p>Videos</p></li>
+                    <li><a href="#"><img src="img/pay.png" class="paid"> </a><p>Eventos pagos</p></li>
+                    <li><a href="#"><img src="img/ring.png"></a><p>Notificações</p></li>
+                </ul>
+            </nav>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="img/profile-pic.png">
+            </div>
+        </section>
+    </header>
+    <!-- este eh o fim do cabecalho -->
+
+    <!-- Samo GDQ  the creater-->
+
+    <!-- corpo da pagina -->
+
+    <!-- esta parte deve ser dinamica. o php fara com que isso seja possivel -->
+    <main class="body-container">
+
+        <!-- ***************lado esquerdo**************************** -->
+        <!-- esta parte sera uma parte dinamica  -->
+        <aside class="left-sidebar">
+            <section class="shortcut-links">
+                <p>Eventos guardados</p>
+                <a href="#"><img src="img/shortcut-1.png">Web Developers WorkShop</a>
+                <a href="#"><img src="img/shortcut-2.png">Web Design Course</a>
+                <a href="#"><img src="img/shortcut-3.png">Web Stack Development Exposes</a>
+                <a href="#"><img src="img/shortcut-4.png">Website Experts</a>
+            </section>
+        </aside>
+
+
+        <!-- ********************parte dos posts*********************** -->
+        <!-- esta parte deve ser dinamica. o php fara com que isso seja possivel -->
+        <div class="main-content">
+            <!-- esta parte eh a parte de status, planos futuros. -->
+            <!-- <div class="story-gallery">
+                <div class="story story1">
+                    <img src="img/upload.png">
+                    <p>Novo Estado</p>
+                </div>
+                <div class="story story2">
+                    <img src="img/member-1.png">
+                    <p>Tio Urso</p>
+                </div>
+                <div class="story story3">
+                    <img src="img/member-2.png">
+                    <p>Samuel Pedro</p>
+                </div>
+                <div class="story story4">
+                    <img src="img/member-3.png">
+                    <p>Amós Júnior</p>
+                </div>
+                <div class="story story5">
+                    <img src="img/member-4.png">
+                    <p>Malcom X</p>
+                </div>
+            </div> -->
+            <!-- fim dos status -->
+
+            <!-- parte para criar/postar o teus eventos -->
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="img/profile-pic.png" >
+                    <div>
+                        <p>Samo Jedequê</p>
+                        <small>Publico <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="Publique seu evento"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="img/live-video.png">Video Live</a>
+                        <a href="#"><img src="img/photo.png">Foto/video</a>
+                        <a href="#"><img src="img/feeling.png">Estado de espirito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- fim da seccao para postar/criar eventos -->
+
+            <!-- este é que é o próprio post -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="img/profile-pic.png" >
+                        <div>
+                            <p>Samo Jedequê</p>
+                            <span>24 Junho 2023, 14:20 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Vote na <span>Renamo </span> o patido que vai mudar e facilitar nossas vidas.</p>
+                <img src="img/feed-image-1.png" class="post-img">
+
+                <div class="post-row-footer">
+                    <div class="icon"><i class="fa-solid fa-thumbs-up" onclick="clickedLike()"></i><span>2.6k </span></div>
+                    <div class="icon"><i class="fa-solid fa-pen-to-square" onclick="myComment()"></i> <span>305</span></div>
+                    <div class="icon"><i class="fa-solid fa-money-check" onclick="clickedPay()"></i> <span>12</span></div>
+                    <div class="icon"><i class="fa-solid fa-share" ></i> <span>12</span></div>
+                </div>
+                <div class="comment-container">
+                    <div class="comment-section">
+                        <img src="img/profile-pic.png">
+                        <div class="comment-input">
+                            <textarea rows="3" placeholder="adicione o comentario..."></textarea>
+                            <div class="media" style="display: none;">
+                                <i class="fa-solid fa-face-smile"></i>
+                                <i class="fa-solid fa-image" onclick="myInput()"></i>
+                            </div>
+                            <div class="send">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-box"> 
+                        <div class="comment-incoming">
+                            <img src="img/profile-pic.png">
+                            <div class="the-comment">
+                                <header class="commenter-details">
+                                    <div class="profile-details">
+                                        <span>Samo Jedequê</span>
+                                        <small>Front-Ender | SoftDevS Founder, MOZ</small>
+                                    </div>
+                                    <div class="time-more">
+                                        <span>3 sem</span>
+                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                        
+                                    </div>
+                                </header>
+
+                                <p>Eu acho que deveria haver mais oportunidade para os jovens.</p>
+                            </div>
+                            <!-- <a href="#">Ver mais...</a> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- aqui é o seu termino -->
+        </div>
+
+        <!-- esta parte deve ser dinamica. o php fara com que isso seja possivel -->
+        <!-- lado direito dos posts -->
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Eventos</h4>
+                <a href="#">Todos</a>
+            </div>
+            
+            <div class="event">
+                <div class="event-left">
+                    <h3>18</h3>
+                    <span>Março</span>
+                </div>
+                <div class="event-right">
+                    <h4>Media Social</h4>
+                    <p> <i class="fas fa-map-marker-alt"></i>Incobadora do Standard Bank</p>
+                    <a href="#">Mais Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-left">
+                    <h3>23</h3>
+                    <span>Março</span>
+                </div>
+                <div class="event-right">
+                    <h4>WorkShop da MozDevs</h4>
+                    <p> <i class="fas fa-map-marker-alt"></i>Parque dos Professores</p>
+                    <a href="#">Mais Info</a>
+                </div>
+            </div>
+            <div class="sidebar-title">
+                <h4>Anúncio</h4>
+                <a href="#"> Fechar</a>
+            </div>
+            <img src="img/advertisement.png" class="sidebar-ads">
+
+            <!-- <div class="sidebar-title">
+                <h4>Conversas</h4>
+                <a href="#">Minizar Chat</a>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="img/member-1.png" >
+                </div>
+                <p>Tio Urso</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="img/member-2.png" >
+                </div>
+                <p>Samuel Pedro</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="img/member-3.png" >
+                </div>
+                <p>Amós Júnior</p>
+            </div> -->
+        </div>
+    </main>
+    <!-- corpo da pagina -->
+    <div class="footer">
+        <p> &copyright 2023 - SoftDevS&reg</p>
+    </div>
+</body>
+<script src="js/appJS.js"></script>
+</html>
