@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
+    <title>Profile | Glamour</title>
+</head>
+<body>
+    <header class="header-container" onclick="allClose()">
+        
+        <!-- logo da app e a opcao de pesquisa -->
+        <section class="nav-left">
+            <!-- devemos trabalhar no logotipo, 
+            este fiz no photoshop e nem domino aquela merda. -->
+            <img src="img/logo.png" class="logo">
+            <div class="search-box">
+                <img src="img/search.png" >
+                <input type="search" placeholder="Pesquisa no TicketLine..,">
+            </div>
+        </section>
+
+        <!-- Aqui temos o menu principal do site -->
+        <section class="nav-right">
+            <nav class="prinpal-menu">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house not"></i></a><p>Principal</p></li>
+                    <li><a href="#"><i class="fa-solid fa-video not"></i></a> <p>Videos</p></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a><p>Eventos pagos</p></li>
+                    <li><a href="#"><i class="fa-solid fa-bell not"></i></a><p>Notificações</p></li>
+                </ul>
+            </nav>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="img/profile-pic.png">
+            </div>
+        </section>
+
+         <!--------------------- Definicoes  eh um popup------------->
+        <!-- deves clicar na photo de perfil para este aparecer -->
+        
+        <section class="settings-menu">
+           
+            <!-- este butão muda de tema escuro para claro e vice-versa -->
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="img/profile-pic.png" >
+                    <div>
+                        <p>Samo Jedequê</p>
+                        <a href="perfil.html">Ver meu perfil</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="user-profile">
+                <img src="img/feedback.png" >
+                <div>
+                    <p>Dê-nos o seu Feedback</p>
+                    <a href="#">Ajude-nos a melhorar o sistema</a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="settings-links">
+                <img src="img/setting.png" class="settings-icon">
+                <a href="#">Definições e privacidades <img src="img/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="img/help.png" class="settings-icon">
+                <a href="#">Ajuda e suporte<img src="img/arrow.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="img/display.png" class="settings-icon">
+                <a href="#">Visualização e Acessibilidade<img src="img/arrow.png" width="10px"></a>
+            </div>
+            <!-- ao tocar neste deve sair outro poupup que ainda nao foi criado -->
+            <div class="settings-links" onclick="loginToggle()">
+                <img src="img/logout.png" class="settings-icon ">
+                <a href="#">Logout<img src="img/arrow.png" width="10px"></a>
+            </div>
+        </section>
+    </header>
+    <main class="body-content">
+        <aside class="left-sidebar">
+            <div class="sidebar-title">
+                <h4>Sugetão</h4>
+                <a href="#">Mais</a>
+            </div>
+
+            <div class="profiles-list">
+                <div class="online sugest">
+                    <img src="img/member-1.png" >
+                </div>
+                <div class="description">
+                    <h1>Mr. Oliveira</h1>
+                    <p>Palestrante</p>
+                </div>
+            </div>
+            <div class="profiles-list">
+                <div class="online sugest">
+                    <img src="img/member-2.png" >
+                </div>
+                <div class="description">
+                    <h1>Samuel Pedro</h1>
+                    <p>Promotor</p>
+                </div>
+            </div>
+            <div class="profiles-list">
+                <div class="online sugest">
+                    <img src="img/member-3.png" >
+                </div>
+                <div class="description">
+                    <h1>Amós Júnior</h1>
+                    <p>Influencer</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="profile">
+            <section class="profile-edit">
+                <section class="cover">
+                    <div class="profile-pic">
+                        <img src="img/profile-pic.png">
+                    </div>
+                    <div class="edit-cover">
+                        <i class="fa-solid fa-pen"></i>
+                    </div>
+                </section>
+                <div class="profile-description">
+                    <div class="profile-name">
+                        <h1>Samo Jedequê</h1>
+                        <p>Cidade de Maputo, Mozambique</p>
+                        <a href="#">1.2k conectados</a>
+                        <section class="button-add">
+                            <div class="add"><button>Informação adicional</button></div>
+                            <div class="about"><button>Sobre mim</button></div>
+                        </section>
+                    </div>
+                    <div class="edit-profile">
+                            <i class="fa-solid fa-pen"></i>
+                    </div>
+                </div>
+                <div class="division"></div>
+                <div class="profile-menu">
+                    <ul>
+                        <li><a href="#">Publicações</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Fotos</a></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="img/profile-pic.png" >
+                    <div>
+                        <p>Samo Jedequê</p>
+                        <small>Publico <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="Publique seu evento"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="img/live-video.png">Video Live</a>
+                        <a href="#"><img src="img/photo.png">Foto/video</a>
+                        <a href="#"><img src="img/feeling.png">Estado de espirito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- este é que é o próprio post -->
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="img/profile-pic.png" >
+                        <div>
+                            <p>Samo Jedequê</p>
+                            <span>24 Junho 2023, 14:20 PM</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+                <p class="post-text">Vote na <span>Renamo </span> o patido que vai mudar e facilitar nossas vidas.</p>
+                <img src="img/feed-image-1.png" class="post-img">
+
+                <div class="post-row-footer">
+                    <div class="icon"><i class="fa-solid fa-thumbs-up" onclick="clickedLike()"></i><span>2.6k </span></div>
+                    <div class="icon"><i class="fa-solid fa-pen-to-square" onclick="myComment()"></i> <span>305</span></div>
+                    <div class="icon"><i class="fa-solid fa-money-check" onclick="clickedPay()"></i> <span>12</span></div>
+                    <div class="icon"><i class="fa-solid fa-share" ></i> <span>12</span></div>
+                </div>
+                <div class="comment-container">
+                    <div class="comment-section">
+                        <img src="img/profile-pic.png">
+                        <div class="comment-input">
+                            <textarea rows="3" placeholder="adicione o comentario..."></textarea>
+                            <div class="media" style="display: none;">
+                                <i class="fa-solid fa-face-smile"></i>
+                                <i class="fa-solid fa-image" onclick="myInput()"></i>
+                            </div>
+                            <div class="send">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-box"> 
+                        <div class="comment-incoming">
+                            <img src="img/profile-pic.png">
+                            <div class="the-comment">
+                                <header class="commenter-details">
+                                    <div class="profile-details">
+                                        <span>Samo Jedequê</span>
+                                        <small>Front-Ender | SoftDevS Founder, MOZ</small>
+                                    </div>
+                                    <div class="time-more">
+                                        <span>3 sem</span>
+                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                        
+                                    </div>
+                                </header>
+
+                                <p>Eu acho que deveria haver mais oportunidade para os jovens.</p>
+                            </div>
+                            <!-- <a href="#">Ver mais...</a> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+
+
+        <section class="right-side">
+            <section class="try-free">
+                <a href="#">Teste nova versao premioum</a>
+                <div class="pic-me">
+                    <img src="img/profile-pic.png">
+                </div>
+                <a href="#">Sugetão de eventos</a> <br>
+                <a href="#">Evento favorito</a>
+            </section>
+            
+            <footer>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Acessibilidade</a></li>
+                    <li><a href="#">Contrato do Usuário</a></li>
+                    <li><a href="#">Política de Privacidade do GLAMOUR</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Política de Direitos Autorais</a></li>
+                    <li><a href="#">Política da Marca</a></li>
+                    <li> <a href="#">Controles de visitantes</a></li>
+                    <li><a href="#">Diretrizes da Comunidade</a></li>
+                </ul>
+                <p>SoftDevS&copy 2024</p>
+            </footer>
+        </section>
+
+    </main>
+</body>
+<script src="js/index.js"></script>
+</html>
